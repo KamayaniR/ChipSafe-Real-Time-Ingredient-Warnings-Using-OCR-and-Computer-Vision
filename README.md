@@ -12,7 +12,7 @@ Our system uses:
 - **BERT-based NLP model** to classify each ingredient as **Safe** or **Risky**
 
 <p align="center">
-  <img src="sample_images/demo_output.png" alt="Demo Output" width="700">
+  <img src="Sample output.png" alt="Demo Output" width="700">
 </p>
 
 ---
