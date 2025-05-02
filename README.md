@@ -1,25 +1,103 @@
 # ChipSafe-Real-Time-Ingredient-Warnings-Using-OCR-and-Computer-Vision
 
-This project develops a Computer Vision (CV)-based tool that extracts ingredients from food package labels and classifies them as **Safe** or **Risky** for individuals with health conditions like allergies, diabetes, heart disease, and more. 
-It combines **OCR (Optical Character Recognition)** and **fine-tuned BERT classification** to assist students and consumers in making safer food choices.
+---
 
-## Project Overview
+## Overview
 
-- **Problem**: Manual ingredient reading is difficult due to small fonts, complex chemical names, and hidden allergens.
-- **Solution**: Automated system that scans ingredient lists and flags risky ingredients in real-time.
-- **Tech Stack**: Python, Pytesseract OCR, Hugging Face Transformers, Gradio for UI.
+Ever struggled to understand the tiny, scientific-sounding ingredients on packaged snacks like chips?
+This project helps **students with allergies or chronic health conditions** make safer food choices — just by uploading a photo of the ingredients label.
 
-## Model Details
+Our system uses:
+- **OCR** (Tesseract) to extract ingredients from images
+- **BERT-based NLP model** to classify each ingredient as **Safe** or **Risky**
 
-- Model: `bert-base-uncased`
-- Fine-tuned on a **custom dataset of 250+ ingredients**.
-- Risk categories:
-  - Allergies (e.g., nuts, shellfish)
-  - Heart disease
-  - Diabetes
-  - Cholesterol
-- Evaluation:
-  - Accuracy: ~68%
-  - F1 Score: ~66%
-- Deployed with: **Gradio**
+<p align="center">
+  <img src="sample_images/demo_output.png" alt="Demo Output" width="700">
+</p>
 
+---
+
+## Key Features
+
+- Upload snack/label images
+- Auto-extract ingredients
+- Risk classification: allergies, diabetes, cholesterol
+- Real-time web interface using Gradio
+
+---
+
+## Motivation
+
+Students often:
+- Struggle to read tiny fonts
+- Don’t recognise chemical names
+- Miss critical allergy information
+
+**We wanted to simplify this — using AI.**
+
+---
+
+## How It Works
+
+| Step | Description |
+|------|-------------|
+| Input | Upload image of chip/snack ingredient list |
+| OCR | Text extracted using Tesseract |
+| Classifier | Ingredients passed through a fine-tuned BERT model |
+| Output | Ingredients tagged as "Safe" 🟩 or "Risky" 🟥 |
+
+---
+
+## Tech Stack
+
+- **Frontend**: Gradio
+- **OCR**: Tesseract
+- **Model**: BERT (fine-tuned on custom ingredient data)
+- **Languages**: Python, PyTorch, Transformers
+
+---
+
+## 📊 Model Info
+
+| Metric     | Score |
+|------------|-------|
+| Accuracy   | 68%   |
+| F1 Score   | 66%   |
+| Base Model | `bert-base-uncased` |
+| Data       | 250+ custom-labeled ingredients |
+
+---
+
+## Project Files
+
+| File | Description |
+|------|-------------|
+| `RiskDetector.py` | Main app with Gradio UI |
+| `cis515project.ipynb` | Data prep, training, and EDA |
+| `ingredient_classifier_final/` | Fine-tuned model files |
+| `requirements.txt` | Python packages |
+| `sample_images/` | Sample label images |
+
+---
+
+## Future Enhancements
+
+- Improve OCR accuracy with denoising
+- Add multilingual support
+- Build mobile scanning app
+- Expand to cosmetics & supplements
+
+---
+
+## References
+
+- [Tesseract OCR](https://github.com/tesseract-ocr/tesseract)
+- [Hugging Face Transformers](https://huggingface.co/transformers/)
+- [Kaggle Food Dataset](https://www.kaggle.com/datasets/uom190346a/food-ingredients-and-allergens)
+
+## Installation
+```bash
+git clone https://github.com/YourUsername/respositoryname.git
+cd Ingredient-Risk-Detector
+pip install -r requirements.txt
+python RiskDetector.py
