@@ -97,7 +97,7 @@ Students often:
 
 ## Installation
 ```bash
-git clone https://github.com/YourUsername/respositoryname.git
-cd Ingredient-Risk-Detector
+git clone https://github.com/YourUsername/ChipSafe-Real-Time-Ingredient-Warnings-Using-OCR-and-Computer-Vision.git
+cd ChipSafe-Real-Time-Ingredient-Warnings-Using-OCR-and-Computer-Vision
 pip install -r requirements.txt
 python RiskDetector.py
