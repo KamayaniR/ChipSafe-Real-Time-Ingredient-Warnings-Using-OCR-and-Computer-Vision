@@ -1,4 +1,4 @@
-# ChipSafe-Real-Time-Ingredient-Warnings-Using-OCR-and-Computer-Vision
+# ChipSafe Real Time Ingredient Warnings Using OCR and Computer-Vision
 
 ---
 
